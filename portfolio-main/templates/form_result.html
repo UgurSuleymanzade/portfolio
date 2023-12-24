@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/css/style.css"> 
+    <title>Спасибо за заполнение формы</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="header__nav main-nav">
+          <ul class="main-nav__list main-list">
+            <li class="main-list__item list-item">
+              <a class="list-item__link" href="/">HOME</a>
+            </li>
+            <li class="main-list__item list-item">
+              <a class="list-item__link" href="#about">ABOUT</a>
+            </li>
+            <li class="main-list__item list-item">
+              <a class="list-item__link" href="#skills">MY SKILLS</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+    <main class="main">
+         <!-- Секция превью -->
+      <section class="main__home home" id="home">
+        <h1 class="home__title">UGUR SULEYMANZADE</h1>
+        <p class="home__subtitle">WEB-DEVELOPER, PYTHON PROGRAMMER, NODE JS PROGRAMMER</p>
+      </section>
+      <!-- Секция с рассказом о себе -->
+      <section class="main__about about" id="about">
+        <h2 class="about__title">ABOUT ME</h2>
+        <div class="about__info info-block">
+          <p class="info-block__text">
+            Меня зовут Угур, занимаюсь программированием уже 4 года
+            Умею писать ботов для ВК, ДС, 2д игры на пайтоне, писать сайты и т.п.
+            Есть свой проект в ВК
+          </p>
+          <img
+            class="info-block__img"
+            src="../static/img/ab.png"
+            alt="me"
+            width="250"
+            height="250"
+          />
+        </div>
+      </section>
+            <!-- Секция со скиллами -->
+            <section class="main__skills skills" id="skills">
+                <h2 class="skills__title">MY SKILLS</h2>
+                <form action="/" method="POST">
+                  <ul class="skills__list skills-list">
+                    <li class="skills-list__skill skill">
+                      <img
+                        class="skill__img"
+                        src="../static/img/python.png"
+                        alt="python"
+                        width="150"
+                        height="150"
+                      />
+                      <span class="skill__info">Skill info</span>
+                      <input class="skill__button" type="submit" name="button_python" value="SHOW PROJECT">
+                    </li>
+                    <li class="skills-list__skill skill">
+                      <img
+                        class="skill__img"
+                        src="../static/img/discord.png"
+                        alt="discord"
+                        width="150"
+                        height="150"
+                      />
+                      <span class="skill__info">Skill info</span>
+                      <input class="skill__button" type="submit" name="button_discord" value="SHOW PROJECT">
+                    </li>
+                    <li class="skills-list__skill skill">
+                      <img
+                        class="skill__img"
+                        src="../static/img/html.png"
+                        alt="html"
+                        width="150"
+                        height="150"
+                      />
+                      <span class="skill__info">Skill info</span>
+                      <input class="skill__button" type="submit" name="button_html" value="SHOW PROJECT">
+                    </li>
+                    <li class="skills-list__skill skill">
+                      <img
+                        class="skill__img"
+                        src="../static/img/db.webp"
+                        alt="SQL"
+                        width="150"
+                        height="150"
+                      />
+                      <span class="skill__info">Skill info</span>
+                      <input class="skill__button" type="submit" name="button_db" value="SHOW PROJECT">
+                    </li>
+                  </ul>
+                </form>
+                {% if button_python%}
+                  <div class="skills__project project" id="project">
+                      <img class="project__img" src="../static/img/python-project.png" alt="project" width="500">
+                      <a class="project__link" href="https://github.com/UgurSuleymanzade/calculator-kodland">Открыть на GitHub</a>
+                  </div>
+                  <div class="skills__project project" id="project">
+                    <img class="project__img" src="../static/img/python-project2.png" alt="project" width="500">
+                    <a class="project__link" href="https://github.com/UgurSuleymanzade/Project-">Открыть на GitHub</a>
+                </div>
+                <div class="skills__project project" id="project">
+                  <img class="project__img" src="../static/img/python-project3.png" alt="project" width="500">
+                  <a class="project__link" href="https://github.com/UgurSuleymanzade/Project-">Открыть на GitHub</a>
+              </div>
+              <div class="skills__project project" id="project">
+                <img class="project__img" src="../static/img/python-project4.png" alt="project" width="500">
+                <a class="project__link" href="https://github.com/UgurSuleymanzade/Project-">Открыть на GitHub</a>
+            </div>
+                {% endif %}
+                {% if button_discord%}
+                  <div class="skills__project project" id="project">
+                      <img class="project__img" src="../static/img/discord-project.png" alt="project" width="500">
+                      <a class="project__link" href="https://github.com/UgurSuleymanzade/DSBot-Kodland">Открыть на GitHub</a>
+                  </div>
+                  <div class="skills__project project" id="project">
+                    <img class="project__img" src="../static/img/discord-project2.png" alt="project" width="500">
+                    <a class="project__link" href="https://github.com/UgurSuleymanzade/ECO-Kodland-Bot">Открыть на GitHub</a>
+                </div>
+                {% endif %}
+                {% if button_html%}
+                  <div class="skills__project project" id="project">
+                      <img class="project__img" src="../static/img/html-project.png" alt="project" width="500">
+                      <a class="project__link" href="https://github.com/UgurSuleymanzade/Kodland-Site">Открыть на GitHub</a>
+                  </div>
+                  <div class="skills__project project" id="project">
+                    <img class="project__img" src="../static/img/html-project2.png" alt="project" width="500">
+                    <a class="project__link" href="https://github.com/UgurSuleymanzade/kodland-site-bot">Открыть на GitHub</a>
+                </div>
+                {% endif %}
+                {% if button_db%}
+                  <div class="skills__project project" id="project">
+                      <img class="project__img" src="../static/img/bd-project.png" alt="project" width="500">
+                      <a class="project__link" href="http://swaoff.pythonanywhere.com/">Открыть Сайт</a>
+                  </div>
+                {% endif %}
+              </section>
+        <h2 class="about__title">Спасибо за заполнение формы!</h2>
+        <div class="main__feedback feedback">
+            <span>Ваша почта: {{ email }} <br></span>
+            <span>Ваше обращение: {{ text }}</span>
+        </div>
+        
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
